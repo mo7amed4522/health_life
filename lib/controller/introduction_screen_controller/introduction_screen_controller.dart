@@ -1,42 +1,50 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:health_life/core/router/route.dart';
-import 'package:health_life/core/server/my_server.dart';
-import 'package:health_life/models/introduction_model.dart';
 
 abstract class IntroductionScreenController  extends GetxController{
-   next();
-  onPageChange(int index);
+  void onSkipClick();
+  void onBackClick();
 }
-class IntroductionScreenContollerImp extends IntroductionScreenController{
-late PageController pageController;
-  MyServices myServise = Get.find();
-  int currentPage = 0;
+class IntroductionScreenContollerImp extends IntroductionScreenController with GetTickerProviderStateMixin{
+ late AnimationController animationController;
 
-  @override
-  next() {
-    currentPage++;
-   if(currentPage > introductionModelList.length -1){
-    myServise.sharedPreferences.setString("step", "1");
-     Get.offAllNamed(AppRoutes.loginPage);
-   }else{
-     pageController.animateToPage(
-      currentPage,
-      duration: const Duration(milliseconds: 900),
-      curve: Curves.easeInOut,
-    );
-   }
-  }
-
-  @override
-  onPageChange(int index) {
-    currentPage = index;
-    update();
-  }
-
-  @override
+ @override
   void onInit() {
-    pageController = PageController();
+    animationController =
+        AnimationController(vsync: this, duration: const Duration(seconds: 8));
+    animationController.animateTo(0.0);
     super.onInit();
+  }
+
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
+  
+  @override
+  void onSkipClick() {
+    animationController.animateTo(0.8,
+        duration: const Duration(milliseconds: 1200));
+  }
+  
+  @override
+  void onBackClick() {
+    if (animationController.value >= 0 &&
+        animationController.value <= 0.2) {
+      animationController.animateTo(0.0);
+    } else if (animationController.value > 0.2 &&
+        animationController.value <= 0.4) {
+      animationController.animateTo(0.2);
+    } else if (animationController.value > 0.4 &&
+        animationController.value <= 0.6) {
+      animationController.animateTo(0.4);
+    } else if (animationController.value > 0.6 &&
+        animationController.value <= 0.8) {
+      animationController.animateTo(0.6);
+    } else if (animationController.value > 0.8 &&
+        animationController.value <= 1.0) {
+      animationController.animateTo(0.8);
+    }
   }
 }
