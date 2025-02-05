@@ -3,8 +3,7 @@ import 'package:flutter_svg/svg.dart';
 
 class WelcomeView extends StatelessWidget {
   final AnimationController animationController;
-  const WelcomeView({Key? key, required this.animationController})
-      : super(key: key);
+  const WelcomeView({super.key, required this.animationController});
 
   @override
   Widget build(BuildContext context) {

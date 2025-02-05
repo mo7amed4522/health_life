@@ -6,11 +6,11 @@ class TopBackSkipView extends StatelessWidget {
   final VoidCallback onSkipClick;
 
   const TopBackSkipView({
-    Key? key,
+    super.key,
     required this.onBackClick,
     required this.onSkipClick,
     required this.animationController,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

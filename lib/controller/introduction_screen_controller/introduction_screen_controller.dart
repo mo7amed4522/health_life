@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 abstract class IntroductionScreenController  extends GetxController{
   void onSkipClick();
   void onBackClick();
+  void onNextClick();
+  void signUpClick();
 }
 class IntroductionScreenContollerImp extends IntroductionScreenController with GetTickerProviderStateMixin{
  late AnimationController animationController;
@@ -46,5 +48,27 @@ class IntroductionScreenContollerImp extends IntroductionScreenController with G
         animationController.value <= 1.0) {
       animationController.animateTo(0.8);
     }
+  }
+  
+  @override
+  void onNextClick() {
+    if (animationController.value >= 0 &&
+        animationController.value <= 0.2) {
+      animationController.animateTo(0.4);
+    } else if (animationController.value > 0.2 &&
+        animationController.value <= 0.4) {
+      animationController.animateTo(0.6);
+    } else if (animationController.value > 0.4 &&
+        animationController.value <= 0.6) {
+    animationController.animateTo(0.8);
+    } else if (animationController.value > 0.6 &&
+        animationController.value <= 0.8) {
+      signUpClick();
+    }
+  }
+  
+  @override
+  void signUpClick() {
+    
   }
 }
