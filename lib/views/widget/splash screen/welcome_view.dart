@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:health_life/core/assets/app_assets.dart';
 
 class WelcomeView extends StatelessWidget {
   final AnimationController animationController;
@@ -67,7 +68,7 @@ class WelcomeView extends StatelessWidget {
                 child: Container(
                   constraints:
                       const BoxConstraints(maxWidth: 350, maxHeight: 350),
-                  child: SvgPicture.asset('assets/svg/welcome.svg'),
+                  child: SvgPicture.asset(AppPhotoLink.welcomeSVG),
                 ),
               ),
               SlideTransition(

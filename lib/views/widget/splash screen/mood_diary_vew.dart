@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:health_life/core/assets/app_assets.dart';
 
 class MoodDiaryVew extends StatelessWidget {
   final AnimationController animationController;
@@ -104,7 +105,7 @@ class MoodDiaryVew extends StatelessWidget {
                   child: Container(
                     constraints:
                         const BoxConstraints(maxWidth: 350, maxHeight: 250),
-                    child: SvgPicture.asset('assets/svg/bicycle.svg'),
+                    child: SvgPicture.asset(AppPhotoLink.bicycleSVG),
                   ),
                 ),
               ),

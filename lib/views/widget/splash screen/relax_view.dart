@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:health_life/core/assets/app_assets.dart';
 
 class RelaxView extends StatelessWidget {
   final AnimationController animationController;
 
-  const RelaxView({Key? key, required this.animationController})
-      : super(key: key);
+  const RelaxView({super.key, required this.animationController});
 
   @override
   Widget build(BuildContext context) {
@@ -103,7 +103,7 @@ class RelaxView extends StatelessWidget {
                 child: Container(
                   constraints:
                       const BoxConstraints(maxWidth: 350, maxHeight: 250),
-                  child: SvgPicture.asset('assets/svg/relaxing.svg'),
+                  child: SvgPicture.asset(AppPhotoLink.relaxingSVG),
                 ),
               ),
             ],

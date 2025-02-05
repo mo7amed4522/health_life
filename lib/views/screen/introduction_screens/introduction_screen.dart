@@ -22,27 +22,27 @@ class IntroductionScreen extends StatelessWidget {
           child: Stack(
           children: [
             SplashView(
-              animationController: controller.animationController!,
+              animationController: controller.animationController,
             ),
             RelaxView(
-              animationController: controller.animationController!,
+              animationController: controller.animationController,
             ),
             CareView(
-              animationController: controller.animationController!,
+              animationController: controller.animationController,
             ),
             MoodDiaryVew(
-              animationController: controller.animationController!,
+              animationController: controller.animationController,
             ),
             WelcomeView(
-              animationController: controller.animationController!,
+              animationController: controller.animationController,
             ),
             TopBackSkipView(
               onBackClick: controller.onBackClick,
               onSkipClick: controller.onSkipClick,
-              animationController: controller.animationController!,
+              animationController: controller.animationController,
             ),
             CenterNextButton(
-              animationController: controller.animationController!,
+              animationController: controller.animationController,
               onNextClick: controller.onNextClick,
             ),
           ],

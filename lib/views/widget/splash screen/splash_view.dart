@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:health_life/core/assets/app_assets.dart';
 
 class SplashView extends StatefulWidget {
   final AnimationController animationController;
@@ -33,7 +34,7 @@ class _SplashViewState extends State<SplashView> {
             SizedBox(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height * .65,
-              child: SvgPicture.asset('assets/svg/mediation.svg'),
+              child: SvgPicture.asset(AppPhotoLink.meditiationSVG),
             ),
             const Padding(
               padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
