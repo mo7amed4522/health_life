@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:health_life/core/assets/app_assets.dart';
 
 class SplashView extends StatefulWidget {
   final AnimationController animationController;
 
-  const SplashView({Key? key, required this.animationController})
-      : super(key: key);
+  const SplashView({super.key, required this.animationController});
 
   @override
   // ignore: library_private_types_in_public_api
@@ -36,18 +37,26 @@ class _SplashViewState extends State<SplashView> {
               height: MediaQuery.of(context).size.height * .65,
               child: SvgPicture.asset(AppPhotoLink.meditiationSVG),
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
               child: Text(
-                "Clearhead",
-                style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
+                "Clearhead".tr,
+                style: GoogleFonts.pacifico(
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.bold,
+                  textStyle: Theme.of(context).textTheme.bodyLarge,
+                ),
               ),
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.only(left: 64, right: 64),
               child: Text(
-                "Lorem ipsum dolor sit amet,consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore",
+                "Lorem ipsum dolor sit amet,consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore"
+                    .tr,
                 textAlign: TextAlign.center,
+                style: GoogleFonts.pacifico(
+                  textStyle: Theme.of(context).textTheme.bodyMedium,
+                ),
               ),
             ),
             const SizedBox(
@@ -70,13 +79,13 @@ class _SplashViewState extends State<SplashView> {
                   ),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(38.0),
-                    color: const Color(0xff132137),
+                    color: Theme.of(context).colorScheme.secondary,
                   ),
-                  child: const Text(
-                    "Let's begin",
-                    style: TextStyle(
+                  child: Text(
+                    "Let's begin".tr,
+                    style: GoogleFonts.pacifico(
                       fontSize: 18,
-                      color: Colors.white,
+                      textStyle: Theme.of(context).textTheme.displayLarge,
                     ),
                   ),
                 ),

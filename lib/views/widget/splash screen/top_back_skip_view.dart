@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class TopBackSkipView extends StatelessWidget {
   final AnimationController animationController;
@@ -62,14 +63,14 @@ class TopBackSkipView extends StatelessWidget {
                 //   child:
                 IconButton(
                   onPressed: onBackClick,
-                  icon: const Icon(Icons.arrow_back_ios_new_rounded),
+                  icon: Icon(Icons.arrow_back_ios_new_rounded),
                   //   ),
                 ),
                 SlideTransition(
                   position: skipAnimation,
                   child: IconButton(
                     onPressed: onSkipClick,
-                    icon: const Text('Skip'),
+                    icon: Text('Skip'.tr),
                   ),
                 ),
               ],

@@ -2,5 +2,6 @@
     "DockerRun.DisableDockerrc": true,
     "DockerRun.Containers": [
         "b8e9005b99f6"
-    ]
+    ],
+    "cmake.sourceDirectory": "/Users/amr/health_life/linux"
 }

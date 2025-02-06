@@ -1,11 +1,18 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CenterNextButton extends StatelessWidget {
   final AnimationController animationController;
   final VoidCallback onNextClick;
-  const CenterNextButton(
-      {super.key, required this.animationController, required this.onNextClick});
+  final VoidCallback onLoginClick;
+  const CenterNextButton({
+    super.key,
+    required this.animationController,
+    required this.onNextClick,
+    required this.onLoginClick,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -58,8 +65,8 @@ class CenterNextButton extends StatelessWidget {
                         animationController.value <= 0.6
                     ? 1
                     : 0,
-                duration: const Duration(milliseconds: 480),
-                child: _pageView(),
+                duration: Duration(milliseconds: 480),
+                child: _pageView(context),
               ),
             ),
           ),
@@ -76,10 +83,10 @@ class CenterNextButton extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(
                         8 + 32 * (1 - _signUpMoveAnimation.value)),
-                    color: const Color(0xff132137),
+                    color: Theme.of(context).colorScheme.secondary,
                   ),
                   child: PageTransitionSwitcher(
-                    duration: const Duration(milliseconds: 480),
+                    duration: Duration(milliseconds: 480),
                     reverse: _signUpMoveAnimation.value < 0.7,
                     transitionBuilder: (
                       Widget child,
@@ -96,36 +103,39 @@ class CenterNextButton extends StatelessWidget {
                     },
                     child: _signUpMoveAnimation.value > 0.7
                         ? InkWell(
-                            key: const ValueKey('Sign Up button'),
+                            key: ValueKey('Sign Up button'),
                             onTap: onNextClick,
                             child: Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 16.0, right: 16.0),
+                              padding: EdgeInsets.only(left: 8.0, right: 8.0),
                               child: Row(
                                 mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: const [
-                                  Text(
-                                    'Sign Up',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w500,
-                                    ),
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text('Sign Up'.tr,
+                                      style: GoogleFonts.pacifico(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        textStyle: Theme.of(context)
+                                            .textTheme
+                                            .bodyMedium,
+                                      )),
+                                  Icon(
+                                    Icons.arrow_forward_rounded,
+                                    color: Theme.of(context).primaryColor,
                                   ),
-                                  Icon(Icons.arrow_forward_rounded,
-                                      color: Colors.white),
                                 ],
                               ),
                             ),
                           )
                         : InkWell(
-                            key: const ValueKey('next button'),
+                            key: ValueKey('next button'),
                             onTap: onNextClick,
-                            child: const Padding(
+                            child: Padding(
                               padding: EdgeInsets.all(16.0),
-                              child: Icon(Icons.arrow_forward_ios_rounded,
-                                  color: Colors.white),
+                              child: Icon(
+                                Icons.arrow_forward_ios_rounded,
+                                color: Theme.of(context).primaryColor,
+                              ),
                             ),
                           ),
                   ),
@@ -134,26 +144,35 @@ class CenterNextButton extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 8),
+            padding: EdgeInsets.only(top: 8),
             child: SlideTransition(
               position: _loginTextMoveAnimation,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: [
                   Text(
-                    'Already have an account? ',
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 14,
-                      fontWeight: FontWeight.normal,
-                    ),
-                  ),
-                  Text(
-                    'Login',
-                    style: TextStyle(
-                      color: Color(0xff132137),
+                    'Already have an account?'.tr,
+                    style: GoogleFonts.pacifico(
+                      textStyle: Theme.of(context).textTheme.bodyMedium,
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text("  "),
+                  InkWell(
+                    onTap: onLoginClick,
+                    child: Text(
+                      'Login'.tr,
+                      style: GoogleFonts.pacifico(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        textStyle: Theme.of(context)
+                            .textTheme
+                            .bodyMedium!
+                            .copyWith(
+                              color: Theme.of(context).colorScheme.secondary,
+                            ),
+                      ),
                     ),
                   ),
                 ],
@@ -165,7 +184,7 @@ class CenterNextButton extends StatelessWidget {
     );
   }
 
-  Widget _pageView() {
+  Widget _pageView(BuildContext context) {
     // ignore: no_leading_underscores_for_local_identifiers
     int _selectedIndex = 0;
 
@@ -186,14 +205,14 @@ class CenterNextButton extends StatelessWidget {
         children: [
           for (var i = 0; i < 4; i++)
             Padding(
-              padding: const EdgeInsets.all(4),
+              padding: EdgeInsets.all(4),
               child: AnimatedContainer(
-                duration: const Duration(milliseconds: 480),
+                duration: Duration(milliseconds: 480),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(32),
                   color: _selectedIndex == i
-                      ? const Color(0xff132137)
-                      : const Color(0xffE3E4E4),
+                      ? Color(0xFFFE270D)
+                      : Color(0xFFF7F5F5),
                 ),
                 width: 10,
                 height: 10,

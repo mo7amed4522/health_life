@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:health_life/core/assets/app_assets.dart';
 
 class CareView extends StatelessWidget {
@@ -44,7 +46,7 @@ class CareView extends StatelessWidget {
         Tween<Offset>(begin: Offset(0, 0), end: Offset(-2, 0))
             .animate(CurvedAnimation(
       parent: animationController,
-      curve: const Interval(
+      curve: Interval(
         0.4,
         0.6,
         curve: Curves.fastOutSlowIn,
@@ -55,7 +57,7 @@ class CareView extends StatelessWidget {
         Tween<Offset>(begin: const Offset(4, 0), end: const Offset(0, 0))
             .animate(CurvedAnimation(
       parent: animationController,
-      curve: const Interval(
+      curve: Interval(
         0.2,
         0.4,
         curve: Curves.fastOutSlowIn,
@@ -77,7 +79,7 @@ class CareView extends StatelessWidget {
       child: SlideTransition(
         position: secondHalfAnimation,
         child: Padding(
-          padding: const EdgeInsets.only(bottom: 100),
+          padding: EdgeInsets.only(bottom: 100),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -86,8 +88,7 @@ class CareView extends StatelessWidget {
                 child: SlideTransition(
                   position: imageSecondHalfAnimation,
                   child: Container(
-                    constraints:
-                        const BoxConstraints(maxWidth: 350, maxHeight: 250),
+                    constraints: BoxConstraints(maxWidth: 350, maxHeight: 250),
                     child: SvgPicture.asset(AppPhotoLink.pilatesSVG),
                   ),
                 ),
@@ -96,19 +97,26 @@ class CareView extends StatelessWidget {
                 position: relaxFirstHalfAnimation,
                 child: SlideTransition(
                   position: relaxSecondHalfAnimation,
-                  child: const Text(
-                    "Care",
-                    style:
-                        TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+                  child: Text(
+                    "Care".tr,
+                    style: GoogleFonts.pacifico(
+                      textStyle: Theme.of(context).textTheme.bodyLarge,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 26,
+                    ),
                   ),
                 ),
               ),
-              const Padding(
+              Padding(
                 padding:
                     EdgeInsets.only(left: 64, right: 64, bottom: 16, top: 16),
                 child: Text(
-                  "Lorem ipsum dolor sit amet,consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore",
+                  "Lorem ipsum dolor sit amet,consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore"
+                      .tr,
                   textAlign: TextAlign.center,
+                  style: GoogleFonts.pacifico(
+                    textStyle: Theme.of(context).textTheme.bodyMedium,
+                  ),
                 ),
               ),
             ],

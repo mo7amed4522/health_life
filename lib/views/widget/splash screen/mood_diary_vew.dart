@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:health_life/core/assets/app_assets.dart';
 
 class MoodDiaryVew extends StatelessWidget {
@@ -80,20 +82,27 @@ class MoodDiaryVew extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                "Mood Dairy",
-                style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+              Text(
+                "Mood Dairy".tr,
+                style: GoogleFonts.pacifico(
+                  fontSize: 26.0,
+                  fontWeight: FontWeight.bold,
+                  textStyle: Theme.of(context).textTheme.bodyLarge,
+                ),
               ),
               SlideTransition(
                 position: moodFirstHalfAnimation,
                 child: SlideTransition(
                   position: moodSecondHalfAnimation,
-                  child: const Padding(
+                  child: Padding(
                     padding: EdgeInsets.only(
                         left: 64, right: 64, top: 16, bottom: 16),
                     child: Text(
-                      "Lorem ipsum dolor sit amet,consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore",
+                      "Lorem ipsum dolor sit amet,consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore"
+                          .tr,
                       textAlign: TextAlign.center,
+                      style: GoogleFonts.pacifico(
+                          textStyle: Theme.of(context).textTheme.bodyMedium),
                     ),
                   ),
                 ),

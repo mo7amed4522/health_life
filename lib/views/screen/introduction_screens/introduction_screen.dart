@@ -9,7 +9,6 @@ import 'package:health_life/views/widget/splash%20screen/splash_view.dart';
 import 'package:health_life/views/widget/splash%20screen/top_back_skip_view.dart';
 import 'package:health_life/views/widget/splash%20screen/welcome_view.dart';
 
-
 class IntroductionScreen extends StatelessWidget {
   const IntroductionScreen({super.key});
 
@@ -18,35 +17,36 @@ class IntroductionScreen extends StatelessWidget {
     return Scaffold(
       body: GetBuilder<IntroductionScreenContollerImp>(
         init: IntroductionScreenContollerImp(),
-        builder: (controller)=>ClipRect(
+        builder: (controller) => ClipRect(
           child: Stack(
-          children: [
-            SplashView(
-              animationController: controller.animationController,
-            ),
-            RelaxView(
-              animationController: controller.animationController,
-            ),
-            CareView(
-              animationController: controller.animationController,
-            ),
-            MoodDiaryVew(
-              animationController: controller.animationController,
-            ),
-            WelcomeView(
-              animationController: controller.animationController,
-            ),
-            TopBackSkipView(
-              onBackClick: controller.onBackClick,
-              onSkipClick: controller.onSkipClick,
-              animationController: controller.animationController,
-            ),
-            CenterNextButton(
-              animationController: controller.animationController,
-              onNextClick: controller.onNextClick,
-            ),
-          ],
-        ),
+            children: [
+              SplashView(
+                animationController: controller.animationController,
+              ),
+              RelaxView(
+                animationController: controller.animationController,
+              ),
+              CareView(
+                animationController: controller.animationController,
+              ),
+              MoodDiaryVew(
+                animationController: controller.animationController,
+              ),
+              WelcomeView(
+                animationController: controller.animationController,
+              ),
+              TopBackSkipView(
+                onBackClick: controller.onBackClick,
+                onSkipClick: controller.onSkipClick,
+                animationController: controller.animationController,
+              ),
+              CenterNextButton(
+                animationController: controller.animationController,
+                onNextClick: controller.onNextClick,
+                onLoginClick: controller.onLoginClick,
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:health_life/core/assets/app_assets.dart';
 
 class WelcomeView extends StatelessWidget {
@@ -59,31 +61,38 @@ class WelcomeView extends StatelessWidget {
       child: SlideTransition(
         position: secondHalfAnimation,
         child: Padding(
-          padding: const EdgeInsets.only(bottom: 100),
+          padding: EdgeInsets.only(bottom: 100),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SlideTransition(
                 position: welcomeImageAnimation,
                 child: Container(
-                  constraints:
-                      const BoxConstraints(maxWidth: 350, maxHeight: 350),
+                  constraints: BoxConstraints(maxWidth: 350, maxHeight: 350),
                   child: SvgPicture.asset(AppPhotoLink.welcomeSVG),
                 ),
               ),
               SlideTransition(
                 position: welcomeFirstHalfAnimation,
-                child: const Text(
-                  "Welcome",
-                  style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
+                child: Text(
+                  "Welcome".tr,
+                  style: GoogleFonts.pacifico(
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold,
+                    textStyle: Theme.of(context).textTheme.bodyLarge,
+                  ),
                 ),
               ),
-              const Padding(
+              Padding(
                 padding:
                     EdgeInsets.only(left: 64, right: 64, top: 16, bottom: 16),
                 child: Text(
-                  "Stay organised and live stress-free with you-do app",
+                  "Stay organised and live stress-free with you-do app".tr,
                   textAlign: TextAlign.center,
+                  style: GoogleFonts.pacifico(
+                    textStyle: Theme.of(context).textTheme.bodyMedium,
+                    fontSize: 20,
+                  ),
                 ),
               ),
             ],
