@@ -57,6 +57,7 @@ We welcome contributions! Follow these steps:
 
 ## My Awesome App
 This is an amazing app that does wonderful things. Below is a screenshot of the app:
+![App Demo](https://github.com/mo7amed4522/health_life/blob/main/review/app_dimo.gif)
 <img src="https://github.com/mo7amed4522/health_life/blob/main/review/screen1.png" alt="App Screenshot" width="300" />
 <img src="https://github.com/mo7amed4522/health_life/blob/main/review/screen2.png" alt="App Screenshot" width="300" />
 <img src="https://github.com/mo7amed4522/health_life/blob/main/review/screen3.png" alt="App Screenshot" width="300" />
