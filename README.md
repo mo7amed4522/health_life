@@ -57,16 +57,14 @@ We welcome contributions! Follow these steps:
 
 ## My Awesome App
 This is an amazing app that does wonderful things. Below is a screenshot of the app:
-
-![Alt text](https://github.com/mo7amed4522/health_life/blob/main/review/screen1.png)
-![Alt text](https://github.com/mo7amed4522/health_life/blob/main/review/screen2.png)
-![Alt text](https://github.com/mo7amed4522/health_life/blob/main/review/screen3.png)
-![Alt text](https://github.com/mo7amed4522/health_life/blob/main/review/screen4.png)
-![Alt text](https://github.com/mo7amed4522/health_life/blob/main/review/screen5.png)
-![Alt text](https://github.com/mo7amed4522/health_life/blob/main/review/screen6.png)
-![Alt text](https://github.com/mo7amed4522/health_life/blob/main/review/screen7.png)
-![Alt text](https://github.com/mo7amed4522/health_life/blob/main/review/screen8.png)
-
+<img src="https://github.com/mo7amed4522/health_life/blob/main/review/screen1.png" alt="App Screenshot" width="300" />
+<img src="https://github.com/mo7amed4522/health_life/blob/main/review/screen2.png" alt="App Screenshot" width="300" />
+<img src="https://github.com/mo7amed4522/health_life/blob/main/review/screen3.png" alt="App Screenshot" width="300" />
+<img src="https://github.com/mo7amed4522/health_life/blob/main/review/screen4.png" alt="App Screenshot" width="300" />
+<img src="https://github.com/mo7amed4522/health_life/blob/main/review/screen5.png" alt="App Screenshot" width="300" />
+<img src="https://github.com/mo7amed4522/health_life/blob/main/review/screen6.png" alt="App Screenshot" width="300" />
+<img src="https://github.com/mo7amed4522/health_life/blob/main/review/screen7.png" alt="App Screenshot" width="300" />
+<img src="https://github.com/mo7amed4522/health_life/blob/main/review/screen8.png" alt="App Screenshot" width="300" />
 ## Support & Contact
 For support, suggestions, or reporting issues, please contact:
 
