@@ -1,8 +1,12 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:health_life/controller/page_view_screen_controller/page_view_screen_controller.dart';
 import 'package:health_life/core/assets/app_assets.dart';
+import 'package:health_life/core/constant/custom_button.dart';
+import 'package:sizer/sizer.dart';
 
 class PageViewScreen extends StatelessWidget {
   const PageViewScreen({super.key});
@@ -12,16 +16,9 @@ class PageViewScreen extends StatelessWidget {
     // Assuming controller.diseases!.symptoms!.one! is a List
 
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: Stack(
         children: [
-          SingleChildScrollView(
-            child: Image.asset(
-              AppPhotoLink.loginImage,
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
-              fit: BoxFit.cover,
-            ),
-          ),
           GetBuilder<PageViewScreenControllerIMP>(
             init: PageViewScreenControllerIMP(),
             builder: (controller) => SizedBox(
@@ -53,18 +50,18 @@ class PageViewScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: MediaQuery.of(context).size.height / 3,
+                      height: MediaQuery.of(context).size.height / 1.5,
                       width: MediaQuery.of(context).size.width,
                       child: PageView.builder(
                         itemCount: 3,
                         itemBuilder: (context, index) => SizedBox(
-                          height: MediaQuery.of(context).size.height / 3,
+                          height: MediaQuery.of(context).size.height,
                           width: MediaQuery.of(context).size.width,
                           child: Column(
                             children: [
                               Center(
                                 child: Text(
-                                  controller.diseases!.name!,
+                                  "Ahmeed",
                                   style: GoogleFonts.poppins(
                                     textStyle: Theme.of(context)
                                         .textTheme
@@ -75,7 +72,7 @@ class PageViewScreen extends StatelessWidget {
                               SizedBox(height: 10),
                               Center(
                                 child: Text(
-                                  controller.diseases!.description!,
+                                  "ali",
                                   style: GoogleFonts.poppins(
                                     textStyle:
                                         Theme.of(context).textTheme.bodyLarge,
@@ -83,8 +80,16 @@ class PageViewScreen extends StatelessWidget {
                                 ),
                               ),
                               SizedBox(height: 10),
-                              Text(controller.diseases!.symptoms!.one![0]),
-                              Text(controller.diseases!.symptoms!.one![1]),
+                              Spacer(),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 10.sp, vertical: 10.sp),
+                                child: SubmitButton1(
+                                  onTap: controller.goToHomePage,
+                                  title: "choice".tr,
+                                ),
+                              ),
+                              //SizedBox(height: 1.h),
                             ],
                           ),
                         ),

@@ -10,7 +10,6 @@ import 'package:health_life/core/translate/translate_app.dart';
 import 'package:sizer/sizer.dart';
 import 'package:health_life/core/server/my_server.dart';
 
-
 class MyHttpOverrides extends HttpOverrides {
   @override
   HttpClient createHttpClient(SecurityContext? context) {
@@ -46,6 +45,7 @@ class MyApp extends StatelessWidget {
     return Sizer(
       builder: (context, orientation, devicetype) => GetMaterialApp(
         debugShowCheckedModeBanner: false,
+        textDirection: TextDirection.rtl,
         onInit: initialize,
         translations: MyTranslation(),
         darkTheme: AppColor.customDarkThem,

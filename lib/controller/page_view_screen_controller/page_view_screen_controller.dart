@@ -1,19 +1,15 @@
 import 'package:get/get.dart';
-import 'package:health_life/models/test_disease.dart';
+import 'package:health_life/core/router/route.dart';
 
 abstract class PageViewScreenController extends GetxController {
   void goBack();
-  void changeValue(String value);
+  void goToHomePage();
 }
 
 class PageViewScreenControllerIMP extends PageViewScreenController {
-  Data? diseases;
-  String? selectedSymptom;
-  int? selectedSymptomIndex; // Holds the index of the selected symptom
-
   @override
   void onInit() {
-    diseases = Get.arguments["dataOfModel"];
+    //diseases = Get.arguments["dataOfModel"];
     super.onInit();
   }
 
@@ -23,8 +19,7 @@ class PageViewScreenControllerIMP extends PageViewScreenController {
   }
 
   @override
-  void changeValue(String value) {
-    selectedSymptom = value;
-    update();
+  void goToHomePage() {
+    Get.toNamed(AppRoutes.homePage);
   }
 }

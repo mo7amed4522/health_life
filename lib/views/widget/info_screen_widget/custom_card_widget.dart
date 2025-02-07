@@ -13,34 +13,39 @@ class CustomCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      child: Container(
-        height: 90,
-        decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.onPrimary,
-          borderRadius: BorderRadius.circular(16.sp),
-          boxShadow: <BoxShadow>[
-            BoxShadow(
-                color: Theme.of(context).colorScheme.error.withOpacity(0.2),
-                offset: Offset(1.1, 1.1),
-                blurRadius: 8.0),
-          ],
-        ),
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 15.sp, vertical: 15.sp),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Icon(
-                Icons.arrow_back_ios,
-                size: 20.sp,
-              ),
-              Text(
-                data,
-                style: GoogleFonts.poppins(
-                  textStyle: Theme.of(context).textTheme.displayLarge,
-                ),
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10.sp, vertical: 10.sp),
+        child: Container(
+          height: 70,
+          decoration: BoxDecoration(
+            color: Theme.of(context).colorScheme.background,
+            borderRadius: BorderRadius.circular(16.sp),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 5,
+                blurRadius: 7,
+                offset: Offset(0, 3), // changes position of shadow
               ),
             ],
+          ),
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 15.sp, vertical: 15.sp),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Icon(
+                  Icons.arrow_back_ios,
+                  size: 20.sp,
+                ),
+                Text(
+                  data,
+                  style: GoogleFonts.poppins(
+                    textStyle: Theme.of(context).textTheme.displayLarge,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

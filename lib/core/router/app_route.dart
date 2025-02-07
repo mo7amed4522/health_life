@@ -9,6 +9,7 @@ import 'package:health_life/views/screen/login_screen/login_screen.dart';
 import 'package:health_life/views/screen/page_view_screen/page_view_screen.dart';
 import 'package:health_life/views/screen/register_screen/register_screen.dart';
 import 'package:health_life/views/screen/start_screen/start_screen.dart';
+import 'package:health_life/views/widget/home_page_screen_widget/customer_drawer_widget.dart';
 
 List<GetPage<dynamic>>? routes = [
   //================= Start Screen =============//
@@ -56,6 +57,13 @@ List<GetPage<dynamic>>? routes = [
   GetPage(
     name: AppRoutes.pageViewPage,
     page: () => const PageViewScreen(),
+    transition: Transition.leftToRightWithFade, // Use custom transition
+    customTransition: CustomFadeScaleTransition(), // Apply custom transition
+    transitionDuration: Duration(milliseconds: 500),
+  ),
+  GetPage(
+    name: AppRoutes.homePage,
+    page: () => const CustomDraw(),
     transition: Transition.leftToRightWithFade, // Use custom transition
     customTransition: CustomFadeScaleTransition(), // Apply custom transition
     transitionDuration: Duration(milliseconds: 500),

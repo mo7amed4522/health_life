@@ -14,6 +14,14 @@ class AppPhotoLink {
   static const String appleImage = "${imageURL}/apple_logo.png";
   static const String editImage = "${imageURL}/eva_edit-fill.png";
   static const String backImage = "${imageURL}/back_arrow.png";
+  static const String todoTaskImage = "${imageURL}/todo_task.png";
+  static const String startNewProgramImage =
+      "${imageURL}/start_new_program.png";
+  static const String myProgramImage = "${imageURL}/my_program.png";
+  static const String injurieImage = "${imageURL}/injurie.png";
+  static const String fagImage = "${imageURL}/FAQ.png";
+  static const String aboutUSImage = "${imageURL}/about_us.png";
+  static const String arrowImage = "${imageURL}/left-arrow.png";
   //================= JSON URL =============//
   static const String jsonURL = "assets/json";
   static const String start_animation = "${jsonURL}/start_anaimation.json";
@@ -27,4 +35,9 @@ class AppPhotoLink {
   static const String pilatesSVG = "${svgURL}/pilates.svg";
   static const String relaxingSVG = "${svgURL}/relaxing.svg";
   static const String welcomeSVG = "${svgURL}/welcome.svg";
+  static const String doctorSVG = "${svgURL}/doctor.svg";
+  static const String homeSVG = "${svgURL}/home.svg";
+  static const String injurieSVG = "${svgURL}/injurie.svg";
+  static const String programSVG = "${svgURL}/programs.svg";
+  static const String settingSVG = "${svgURL}/setting.svg";
 }

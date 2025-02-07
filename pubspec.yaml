@@ -46,6 +46,7 @@ dependencies:
   sizer: ^3.0.5
   image_picker: ^1.1.2
   animations: ^2.0.0
+  matrix4_transform: ^2.0.1
 
 dev_dependencies:
   flutter_test:

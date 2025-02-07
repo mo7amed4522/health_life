@@ -56,6 +56,28 @@ class MyTranslation implements Translations {
           "policy2": "شروط الاستخدام ",
           "policy3": " أو ",
           "policy4": "سياسة الخصوصية",
+          // pageView Screen
+          "choice": "الاختيار",
+          //Custom Drawer
+          "doctor": "الطبيب المعالج",
+          "home": "الصفحه الرئيسيه",
+          "injurie": "الاصابه",
+          "program": "البرنامج العلاجي",
+          "setting": "الاعدادات",
+          "signout": "تسجيل الخروج",
+          // Home Page Widget
+          "todotask": "المهمات",
+          "myProg": "برنامجي اليومي",
+          "injurie": "الاصابه",
+          "startNewProg": "ابداء برنامج جديد",
+          "aboutUs": "من نحن",
+          "faq": "طريقه الاستخدام",
+          "todoDisc": "معرفه المهمام والتمارين اليوميه بالتطبيق",
+          "progDesc": "معرفه البرامج اللازمه تأديتها",
+          "injurieDesc": "معلومات عن انواع الاصابات المختلفه",
+          "startNewProgDesc": "رويه البرامج الرياضيه والتمارين اليوميه",
+          "aboutUsDesc": "رويه الملف الشخصي عن المعالجون",
+          "faqDesc": "طريقه استخدام التطبيق السليمه",
         },
         "en": {
           "app_name": "Health Life",
@@ -108,6 +130,28 @@ class MyTranslation implements Translations {
           "policy2": "Terms of Use",
           "policy3": " and ",
           "policy4": "Privacy Policy",
+          // pageView Screen
+          "choice": "`choice`",
+          //Custom Drawer
+          "doctor": "Doctor",
+          "home": "Home Page",
+          "injurie": "Injuries",
+          "program": "Program",
+          "setting": "Settings",
+          "signout": "Sign Out",
+          // Home Page Widget
+          "todotask": "Todo Task",
+          "myProg": "My Program",
+          "injurie": "injurie",
+          "startNewProg": "startNewProg",
+          "aboutUs": "aboutUs",
+          "faq": "FAQ",
+          "todoDisc": "View Today's treatments & training in the app",
+          "progDesc": "LCL Sprain",
+          "injurieDesc": "Learn about sport Injurie",
+          "startNewProgDesc": "Show All Programe",
+          "aboutUsDesc": "Meet our Physicians",
+          "faqDesc": "How to access App",
         }
       };
 }

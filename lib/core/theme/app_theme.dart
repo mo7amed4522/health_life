@@ -66,7 +66,7 @@ class AppColor {
     cardTheme: CardTheme(color: Colors.grey[400]),
     colorScheme: ColorScheme(
       primary: Color(0xff5DB1DF),
-      background: Color(0XFF212845),
+      background: Color.fromARGB(255, 248, 248, 248),
       secondary: Color(0xFFFE270D),
       surface: Color(0XFFF8D320),
       onSurface: Colors.green,

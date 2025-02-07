@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:health_life/controller/info_screens_controller/info_screen_controller.dart';
@@ -11,18 +13,11 @@ class InformationScreens extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: GetBuilder<InformationScreenControllerIMP>(
         init: InformationScreenControllerIMP(),
         builder: (controller) => Stack(
           children: [
-            SingleChildScrollView(
-              child: Image.asset(
-                AppPhotoLink.loginImage,
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
-                fit: BoxFit.cover,
-              ),
-            ),
             SizedBox(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
@@ -40,23 +35,20 @@ class InformationScreens extends StatelessWidget {
                         ),
                       ),
                     ),
-                    controller.isLoad == false
-                        ? SizedBox()
-                        : SizedBox(
-                            height: MediaQuery.of(context).size.height - 40,
-                            child: ListView.separated(
-                              itemCount: controller.diseases!.length,
-                              separatorBuilder:
-                                  (BuildContext context, int index) =>
-                                      SizedBox(height: 2.h),
-                              itemBuilder: (context, index) => CustomCardWidget(
-                                data: controller.diseases![index].name!,
-                                onTap: () {
-                                  controller.goToPageView(index);
-                                },
-                              ),
-                            ),
-                          )
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height - 40,
+                      child: ListView.separated(
+                        itemCount: 3,
+                        separatorBuilder: (BuildContext context, int index) =>
+                            SizedBox(height: 2.h),
+                        itemBuilder: (context, index) => CustomCardWidget(
+                          data: "Ahmed",
+                          onTap: () {
+                            controller.goToPageView();
+                          },
+                        ),
+                      ),
+                    )
                   ],
                 ),
               ),

@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:health_life/controller/start_screen_controller/start_screen_controller.dart';
@@ -9,10 +11,11 @@ class StartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: GetBuilder<StartScreenControllerIMP>(
         init: StartScreenControllerIMP(),
-        builder:(controller)=> Stack(
+        builder: (controller) => Stack(
           children: [
             LogoStartWidget(),
             Padding(
@@ -22,9 +25,7 @@ class StartScreen extends StatelessWidget {
                 child: Text(
                   'start_text'.tr,
                   style: GoogleFonts.reemKufi(
-                    fontSize: 30,
-                    fontWeight: FontWeight.w400 
-                  ),
+                      fontSize: 30, fontWeight: FontWeight.w400),
                 ),
               ),
             ),

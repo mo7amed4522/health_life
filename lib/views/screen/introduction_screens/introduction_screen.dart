@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:health_life/controller/introduction_screen_controller/introduction_screen_controller.dart';
@@ -15,6 +17,7 @@ class IntroductionScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: GetBuilder<IntroductionScreenContollerImp>(
         init: IntroductionScreenContollerImp(),
         builder: (controller) => ClipRect(
